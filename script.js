@@ -15,7 +15,7 @@ const products = [
     {
         id: 3,
         name: "Laptop Ultra Slim 15\"",
-        price: 999.50,
+        price: 159.50,
         image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80"
     },
     {
@@ -27,19 +27,19 @@ const products = [
     {
         id: 5,
         name: "Cámara Mirrorless 4K",
-        price: 750.00,
+        price: 250.00,
         image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=80"
     },
     {
         id: 6,
         name: "Consola de Videojuegos Pro",
-        price: 499.99,
+        price: 199.99,
         image: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80"
     },
     {
         id: 7,
         name: "Consola de Videojuegos Pro",
-        price: 250.99,
+        price: 15.99,
         image: "ps2-venta.png"
     }
 ];
