@@ -156,3 +156,36 @@ function updateCart() {
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     cartTotalPrice.textContent = `$${totalPrice.toFixed(2)}`;
 }
+// Finalizar compra y enviar a WhatsApp
+    checkoutBtn.addEventListener('click', () => {
+        if (cart.length === 0) {
+            alert('Tu carrito está vacío.');
+            return;
+        }
+
+        // ⚠️ COLOCA AQUÍ TU NÚMERO DE WHATSAPP (Incluye código de país y área, sin el símbolo + ni espacios)
+        // Ejemplo para Uruguay: 59899123456 o el país que corresponda
+        const phoneNumber = "59899123456"; 
+
+        // Construir el mensaje del pedido
+        let message = "¡Hola! Me gustaría realizar el siguiente pedido:\n\n";
+
+        cart.forEach(item => {
+            message += `- ${item.quantity}x ${item.name} ($${(item.price * item.quantity).toFixed(2)})\n`;
+        });
+
+        const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        message += `\n*Total a pagar: $${totalPrice.toFixed(2)}*`;
+
+        // Codificar el texto para que la URL de WhatsApp lo lea correctamente
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        // Abrir WhatsApp en una nueva pestaña
+        window.open(whatsappUrl, '_blank');
+
+        // Limpiar el carrito y cerrar el menú lateral
+        cart = [];
+        updateCart();
+        toggleCart();
+    });
