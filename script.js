@@ -165,7 +165,7 @@ function updateCart() {
 
         // ⚠️ COLOCA AQUÍ TU NÚMERO DE WHATSAPP (Incluye código de país y área, sin el símbolo + ni espacios)
         // Ejemplo para Uruguay: 59899123456 o el país que corresponda
-        const phoneNumber = "59899123456"; 
+        const phoneNumber = "59892042700"; 
 
         // Construir el mensaje del pedido
         let message = "¡Hola! Me gustaría realizar el siguiente pedido:\n\n";
